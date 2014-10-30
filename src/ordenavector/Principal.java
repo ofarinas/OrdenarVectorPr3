@@ -15,17 +15,13 @@ public class Principal {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int[] test = {4, 5, 68, 8, 1};
-        int[] test3 = GeneraCaso.generaVector(1000, true);
+        CalculadorEstadisticas calculadorEstadisticas = new CalculadorEstadisticas();
+        DatosEstadisticos[] datosEstadisticos = calculadorEstadisticas.estadisticaOrdenaVector(new OrdenaVector(), 100);
+       int i=10;
 
-        OrdenaVector ordenaVector = new OrdenaVector();
-        DatosEstadisticos datosEstadisticos=new DatosEstadisticos();
-        ordenaVector.ordena(test3, datosEstadisticos);
-        for (int i = 0; i < test3.length; i++) {
-            System.out.println(test3[i]);
+    float f=(float) 3.1415;
 
-        }
-        System.out.println(datosEstadisticos.dameTiempo()); 
+   System.out.printf("%6d %5.2f\n",i,f);
+            
     }
-
-}
+    }
